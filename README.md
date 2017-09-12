@@ -25,7 +25,12 @@ EPA Data Catalogue Search - ElasticSearch
       - [Pip-review](#pip-review)
       - [Virtualenv](#virtualenv)
       - [Python 2.7 (ElastAlert)](#python-27-elastalert)
-        - [Pip-review 2.7](#pip-review-27)
+        - [Pip-review 2.7](#pip-review-27)	
+    - [Ruby](#ruby)    
+      - [Ruby 23-x64](#ruby-23-x64)
+      - [RubyGems 2.6.11](#rubygems-2611)
+        - [Bundler](#bundler)	
+      - [JRuby 9.1.12.0](#jruby-91120)      
     - [Perl](#perl)
       - [cpanm](#cpanm)
     - [Scala](#scala)
@@ -167,6 +172,8 @@ Re-run `RClientSetup.exe` in folder `Microsoft.R.Open.Exe,version=3.3.2.1026,chi
 
 Download: <http://nginx.org/download/nginx-1.13.4.zip> (Windows)  
 Tutorial: <http://nginx.org/en/docs/windows.html>  
+Discussion: <https://arstechnica.com/information-technology/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/>  
+
 
 ```bash
 start nginx
@@ -352,6 +359,30 @@ c:\dev\python\python27\Scripts\pip install pip-review
 c:\dev\python\python27\Scripts\pip-review --local --interactive
 ```
 
+
+### Ruby
+
+#### Ruby 23-x64
+
+Install: <https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe>  
+Install path suggestion: `c:\dev\ruby\ruby23-x64`  
+
+#### RubyGems 2.6.11
+
+Install: <https://rubygems.org/rubygems/rubygems-2.6.11.zip>  
+Install path suggestion: `c:\dev\ruby\rubygems-2.6.11`  
+
+##### Bundler  
+Environment Variables  
+Add `;c:\dev\ruby\rubygems-2.6.11\bundler\lib` to System `PATH`  
+
+
+#### JRuby 9.1.12.0
+
+Install (Win 64 Exe): <https://s3.amazonaws.com/jruby.org/downloads/9.1.12.0/jruby_windows_x64_9_1_12_0.exe>   
+Install path suggestion: `c:\dev\ruby\jruby-9.1.12.0`  
+
+
 ### Perl 
 <img  alt="logo" height="28" src="http://www.douglasputnam.com/wp-content/uploads/2015/09/perl_logo_oreilly.jpg"/>
 
@@ -415,6 +446,19 @@ git push origin master
 To remove ‘origin’ (if desired to re-use)
 ```bash
 git remote rm origin
+```
+
+To stage and push edited files:
+```bash
+git add .
+git status
+git push
+```
+
+
+If `git push` is not updating files in the remote repo, try:
+```bash
+git push origin master:master
 ```
 
 #### Configure GIT Cert Path
@@ -2025,7 +2069,7 @@ GitHub: <https://github.com/swagger-api/swagger-ui>
 Tutorial: <http://swagger.io/docs/swagger-tools/#swagger-ui-documentation-29>  
 Install:  <https://github.com/swagger-api/swagger-ui/archive/master.zip>  
 
-Copy `Dist` folder to server, e.g. `C:\Apache24\htdocs\swagger-ui\dist`
+Copy `Dist` folder to server, e.g. `C:\Apache24\htdocs\public\swagger-ui\dist`
 
 Edit `index.html`, set `url` to Python-Eve address (ensuring that ‘Eve-Swagger’ is installed and configured)
 
